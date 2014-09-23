@@ -7,6 +7,9 @@
 //
 
 #import "PSRQuizViewController.h"
+#import "PSRAnswer.h"
+#import "PSRQuestion.h"
+
 
 @interface PSRQuizViewController ()
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self checkSomeMethods];
+    [self initModel];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,6 +33,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)answerPressed:(UIButton *)sender
+{
+    
+}
+
+- (void)initModel
+{
+    PSRQuestion  *question1 = [[PSRQuestion alloc] initWithText:@"some text" answers:nil];
 }
 
 @end

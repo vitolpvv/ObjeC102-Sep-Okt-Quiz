@@ -10,6 +10,8 @@
 
 @interface PSRQuizViewController : UIViewController
 
+- (IBAction)answerPressed:(UIButton *)sender;
+
 
 @end
 

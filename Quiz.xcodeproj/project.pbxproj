@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1A0FBD19D1EAE70018FD2D /* PSRAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */; };
+		FE1A0FC119D1EF480018FD2D /* PSRQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */; };
 		FEBF301F19D1DAE700BB62B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF301E19D1DAE700BB62B2 /* main.m */; };
 		FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302119D1DAE700BB62B2 /* AppDelegate.m */; };
 		FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE1A0FBB19D1EAE70018FD2D /* PSRAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRAnswer.h; path = ../PSRAnswer.h; sourceTree = "<group>"; };
+		FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRAnswer.m; path = ../PSRAnswer.m; sourceTree = "<group>"; };
+		FE1A0FBF19D1EF480018FD2D /* PSRQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRQuestion.h; sourceTree = "<group>"; };
+		FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRQuestion.m; sourceTree = "<group>"; };
 		FEBF301919D1DAE700BB62B2 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBF301D19D1DAE700BB62B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEBF301E19D1DAE700BB62B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE1A0FBE19D1EB010018FD2D /* QuizeView */ = {
+			isa = PBXGroup;
+			children = (
+				FE1A0FBF19D1EF480018FD2D /* PSRQuestion.h */,
+				FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */,
+				FE1A0FBB19D1EAE70018FD2D /* PSRAnswer.h */,
+				FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */,
+				FEBF302319D1DAE700BB62B2 /* PSRQuizViewController.h */,
+				FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */,
+			);
+			name = QuizeView;
+			sourceTree = "<group>";
+		};
 		FEBF301019D1DAE700BB62B2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +102,7 @@
 			children = (
 				FEBF302019D1DAE700BB62B2 /* AppDelegate.h */,
 				FEBF302119D1DAE700BB62B2 /* AppDelegate.m */,
-				FEBF302319D1DAE700BB62B2 /* PSRQuizViewController.h */,
-				FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */,
+				FE1A0FBE19D1EB010018FD2D /* QuizeView */,
 				FEBF302619D1DAE700BB62B2 /* Main.storyboard */,
 				FEBF302919D1DAE700BB62B2 /* Images.xcassets */,
 				FEBF302B19D1DAE700BB62B2 /* LaunchScreen.xib */,
@@ -222,6 +240,8 @@
 				FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */,
 				FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */,
 				FEBF301F19D1DAE700BB62B2 /* main.m in Sources */,
+				FE1A0FC119D1EF480018FD2D /* PSRQuestion.m in Sources */,
+				FE1A0FBD19D1EAE70018FD2D /* PSRAnswer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +434,7 @@
 				FEBF303E19D1DAE700BB62B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEBF303F19D1DAE700BB62B2 /* Build configuration list for PBXNativeTarget "QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +443,7 @@
 				FEBF304119D1DAE700BB62B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

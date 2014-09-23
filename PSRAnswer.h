@@ -1,0 +1,23 @@
+//
+//  PSRAnswer.h
+//  Quiz
+//
+//  Created by n.shubenkov on 23/09/14.
+//  Copyright (c) 2014 n.shubenkov. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface PSRAnswer : NSObject
+
+//strong
+//weak
+//copy
+@property (nonatomic, strong, readonly) NSString *text;
+@property (nonatomic) BOOL correct;
+
++ (instancetype)answerWithText:(NSString *)text isCoorect:(BOOL)correct;
+
+- (instancetype)initWithText:(NSString *)text isCorrect:(BOOL)correct;
+
+@end
