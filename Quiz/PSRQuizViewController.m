@@ -37,7 +37,7 @@
 
 - (IBAction)answerPressed:(UIButton *)sender
 {
-    
+//    djklsgdfjkbdlkdfskljoloildghio rtdio 
 }
 
 - (void)initModel
