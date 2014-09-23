@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FEBF301F19D1DAE700BB62B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF301E19D1DAE700BB62B2 /* main.m */; };
 		FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302119D1DAE700BB62B2 /* AppDelegate.m */; };
-		FEBF302519D1DAE700BB62B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302419D1DAE700BB62B2 /* ViewController.m */; };
+		FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */; };
 		FEBF302819D1DAE700BB62B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBF302619D1DAE700BB62B2 /* Main.storyboard */; };
 		FEBF302A19D1DAE700BB62B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBF302919D1DAE700BB62B2 /* Images.xcassets */; };
 		FEBF302D19D1DAE700BB62B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBF302B19D1DAE700BB62B2 /* LaunchScreen.xib */; };
@@ -32,8 +32,8 @@
 		FEBF301E19D1DAE700BB62B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEBF302019D1DAE700BB62B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEBF302119D1DAE700BB62B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FEBF302319D1DAE700BB62B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FEBF302419D1DAE700BB62B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FEBF302319D1DAE700BB62B2 /* PSRQuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSRQuizViewController.h; sourceTree = "<group>"; };
+		FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSRQuizViewController.m; sourceTree = "<group>"; };
 		FEBF302719D1DAE700BB62B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEBF302919D1DAE700BB62B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FEBF302C19D1DAE700BB62B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 			children = (
 				FEBF302019D1DAE700BB62B2 /* AppDelegate.h */,
 				FEBF302119D1DAE700BB62B2 /* AppDelegate.m */,
-				FEBF302319D1DAE700BB62B2 /* ViewController.h */,
-				FEBF302419D1DAE700BB62B2 /* ViewController.m */,
+				FEBF302319D1DAE700BB62B2 /* PSRQuizViewController.h */,
+				FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */,
 				FEBF302619D1DAE700BB62B2 /* Main.storyboard */,
 				FEBF302919D1DAE700BB62B2 /* Images.xcassets */,
 				FEBF302B19D1DAE700BB62B2 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEBF302519D1DAE700BB62B2 /* ViewController.m in Sources */,
+				FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */,
 				FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */,
 				FEBF301F19D1DAE700BB62B2 /* main.m in Sources */,
 			);

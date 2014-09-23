@@ -6,17 +6,24 @@
 //  Copyright (c) 2014 n.shubenkov. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PSRQuizViewController.h"
 
-@interface ViewController ()
+@interface PSRQuizViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PSRQuizViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self checkSomeMethods];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)checkSomeMethods
+{
+    NSArray *array = @[@"asfasjfhs", @"salkhfsaio", @"dsljkhsdo"];
+    NSNumber *number  = @(124);
 }
 
 - (void)didReceiveMemoryWarning {
