@@ -13,10 +13,10 @@
 //strong
 //weak
 //copy
-@property (nonatomic, strong, readonly) NSString *text;
+@property (nonatomic, copy, readonly) NSString *text;
 @property (nonatomic) BOOL correct;
 
-+ (instancetype)answerWithText:(NSString *)text isCoorect:(BOOL)correct;
++ (instancetype)answerWithText:(NSString *)text isCorect:(BOOL)correct;
 
 - (instancetype)initWithText:(NSString *)text isCorrect:(BOOL)correct;
 

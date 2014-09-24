@@ -9,7 +9,7 @@
 #import "PSRAnswer.h"
 
 @interface PSRAnswer ()
-@property (nonatomic, strong, readwrite) NSString *text;
+@property (nonatomic, copy, readwrite) NSString *text;
 @end
 
 @implementation PSRAnswer
@@ -22,6 +22,10 @@
         _correct = correct;
     }
     return self;
+}
+
++ (instancetype)answerWithText:(NSString *)text isCorect:(BOOL)correct {
+    return [[PSRAnswer alloc] initWithText:text isCorrect:correct];
 }
 
 @end
