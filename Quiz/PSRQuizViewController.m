@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self checkSomeMethods];
-    [self initModel];
+    [self createModel];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -40,9 +40,9 @@
 //    djklsgdfjkbdlkdfskljoloildghio rtdio 
 }
 
-- (void)initModel
+- (void)createModel
 {
-    PSRQuestion  *question1 = [[PSRQuestion alloc] initWithText:@"some text" answers:nil];
+    PSRQuestion  *question1 = [[PSRQuestion alloc] initWithText:@"some text" answers:@[@"1", @"2"]];
 }
 
 @end

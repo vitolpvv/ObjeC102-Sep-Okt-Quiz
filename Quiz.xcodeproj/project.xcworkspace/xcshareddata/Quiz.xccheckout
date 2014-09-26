@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>211CDC84-B66A-4161-B883-B90C27812DCD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Quiz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE0B29290A2F06D09EB7535974127B2486E7DD4D</key>
+		<string>https://github.com/DmitryArbuzov/ObjeC102-Sep-Okt-Quiz.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Quiz.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE0B29290A2F06D09EB7535974127B2486E7DD4D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DmitryArbuzov/ObjeC102-Sep-Okt-Quiz.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE0B29290A2F06D09EB7535974127B2486E7DD4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE0B29290A2F06D09EB7535974127B2486E7DD4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ObjeC102-Sep-Okt-Quiz</string>
+		</dict>
+	</array>
+</dict>
+</plist>
