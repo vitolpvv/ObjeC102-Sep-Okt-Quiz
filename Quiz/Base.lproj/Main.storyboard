@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xiU-Yl-IQ8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -116,6 +116,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11" y="114"/>
+        </scene>
+        <!--Animation Controller-->
+        <scene sceneID="jZR-8A-aou">
+            <objects>
+                <viewController id="xiU-Yl-IQ8" customClass="PSRAnimationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xxB-P0-6nH"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJ2-6t-a1J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ka-ei-fBq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5L9-xQ-JIG">
+                                <rect key="frame" x="16" y="15" width="194" height="290"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGY-O4-Hqw">
+                                        <rect key="frame" x="26" y="8" width="130" height="165"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVb-6A-rM5">
+                                <rect key="frame" x="27" y="260" width="125" height="170"/>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.69803921570000005" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="firstView" destination="5L9-xQ-JIG" id="S2P-BS-Tbg"/>
+                        <outlet property="secondView" destination="OVb-6A-rM5" id="uwa-pe-Qnp"/>
+                        <outlet property="thirdView" destination="eGY-O4-Hqw" id="CBA-Ws-f4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vru-KP-9PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-564" y="-613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tKh-xH-JhZ">

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FE1A0FBD19D1EAE70018FD2D /* PSRAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */; };
 		FE1A0FC119D1EF480018FD2D /* PSRQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */; };
+		FE4CC49A19D5CB2200DC59E3 /* quiz1.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4CC49919D5CB2200DC59E3 /* quiz1.plist */; };
+		FE4CC49D19D5D02300DC59E3 /* PSRAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4CC49C19D5D02300DC59E3 /* PSRAnimationController.m */; };
 		FEBF301F19D1DAE700BB62B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF301E19D1DAE700BB62B2 /* main.m */; };
 		FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302119D1DAE700BB62B2 /* AppDelegate.m */; };
 		FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBF302419D1DAE700BB62B2 /* PSRQuizViewController.m */; };
@@ -33,6 +35,9 @@
 		FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRAnswer.m; path = ../PSRAnswer.m; sourceTree = "<group>"; };
 		FE1A0FBF19D1EF480018FD2D /* PSRQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRQuestion.h; sourceTree = "<group>"; };
 		FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRQuestion.m; sourceTree = "<group>"; };
+		FE4CC49919D5CB2200DC59E3 /* quiz1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quiz1.plist; sourceTree = "<group>"; };
+		FE4CC49B19D5D02300DC59E3 /* PSRAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRAnimationController.h; sourceTree = "<group>"; };
+		FE4CC49C19D5D02300DC59E3 /* PSRAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRAnimationController.m; sourceTree = "<group>"; };
 		FEBF301919D1DAE700BB62B2 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBF301D19D1DAE700BB62B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEBF301E19D1DAE700BB62B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,9 +109,12 @@
 				FEBF302119D1DAE700BB62B2 /* AppDelegate.m */,
 				FE1A0FBE19D1EB010018FD2D /* QuizeView */,
 				FEBF302619D1DAE700BB62B2 /* Main.storyboard */,
+				FE4CC49B19D5D02300DC59E3 /* PSRAnimationController.h */,
+				FE4CC49C19D5D02300DC59E3 /* PSRAnimationController.m */,
 				FEBF302919D1DAE700BB62B2 /* Images.xcassets */,
 				FEBF302B19D1DAE700BB62B2 /* LaunchScreen.xib */,
 				FEBF301C19D1DAE700BB62B2 /* Supporting Files */,
+				FE4CC49919D5CB2200DC59E3 /* quiz1.plist */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 				FEBF302819D1DAE700BB62B2 /* Main.storyboard in Resources */,
 				FEBF302D19D1DAE700BB62B2 /* LaunchScreen.xib in Resources */,
 				FEBF302A19D1DAE700BB62B2 /* Images.xcassets in Resources */,
+				FE4CC49A19D5CB2200DC59E3 /* quiz1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +248,7 @@
 			files = (
 				FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */,
 				FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */,
+				FE4CC49D19D5D02300DC59E3 /* PSRAnimationController.m in Sources */,
 				FEBF301F19D1DAE700BB62B2 /* main.m in Sources */,
 				FE1A0FC119D1EF480018FD2D /* PSRQuestion.m in Sources */,
 				FE1A0FBD19D1EAE70018FD2D /* PSRAnswer.m in Sources */,

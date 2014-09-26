@@ -21,6 +21,7 @@
     [super viewDidLoad];
     [self checkSomeMethods];
     [self createModel];
+    [self showBlocks];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,6 +29,33 @@
 {
     NSArray *array = @[@"asfasjfhs", @"salkhfsaio", @"dsljkhsdo"];
     NSNumber *number  = @(124);
+}
+
+
+int squareFunction(int a){
+    return a * a;
+}
+
+
+
+- (void)showBlocks
+{
+    int number = 5;
+    
+    NSString *someString = @"hello";
+    
+    
+    
+    int (^square)(int a) = ^int(int a) {
+        
+        NSLog(@"%@",someString);
+        return a * a;
+    };
+    
+    NSLog(@"square of %d is %d",number, square(number));
+    
+    NSLog(@"sque of %d is %d", 77,square(77));
+    
 }
 
 - (void)didReceiveMemoryWarning {
