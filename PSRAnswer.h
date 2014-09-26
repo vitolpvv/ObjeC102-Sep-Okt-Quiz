@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface PSRAnswer : NSObject
 
@@ -14,6 +15,7 @@
 //weak
 //copy
 @property (nonatomic, copy, readonly) NSString *text;
+@property (nonatomic, strong) UIImage *image;
 @property (nonatomic) BOOL correct;
 
 + (instancetype)answerWithText:(NSString *)text isCorect:(BOOL)correct;

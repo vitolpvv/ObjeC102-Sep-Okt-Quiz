@@ -14,9 +14,30 @@
 
 @implementation PSRAnimationController
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(someNotification:)
+                                                 name:nil
+                                               object:nil];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)someNotification:(NSNotification *)notification
+{
+    NSLog(@"recived notification %@",notification);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated

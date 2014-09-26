@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface PSRQuestion : NSObject
 @property (nonatomic, copy) NSString *text;
-@property (nonatomic, copy) NSArray *answers;
+@property (nonatomic, strong) NSArray *answers;
 
-- (instancetype)initWithText:(NSString *)text answers:(NSArray *)answers;
+- (instancetype)initWithText:(NSString *)text image:(UIImage *)image answers:(NSArray *)answers;
 
 @end
