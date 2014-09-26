@@ -63,9 +63,9 @@
         PSRQuestion *question = [[PSRQuestion alloc] initWithText:texts[i]
                                                             image:images[i]
                                                           answers:localAnswers];
-        [questions addObject:questions];
+        [questions addObject:question];
     }
-    PSRAnswer *queze = [PSRQuize quizeWithQuestions:questions];
+    PSRQuize *queze = [PSRQuize quizeWithQuestions:questions];
     return queze;
 }
 

@@ -10,13 +10,14 @@
 
 @implementation PSRQuestion
 
-- (instancetype)initWithText:(NSString *)text answers:(NSArray *)answers
+- (instancetype)initWithText:(NSString *)text image:(UIImage *)image answers:(NSArray *)answers
 {
     NSParameterAssert(text.length > 0);
     NSAssert(answers.count > 0, @"it is stupid to create queestion without answers %@",@"privet");
     if (self == [super init]){
         _text = [text copy];
         _answers = [answers copy];
+        _image = image;
     }
     return self;
 }

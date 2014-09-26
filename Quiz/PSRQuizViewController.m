@@ -7,60 +7,54 @@
 //
 
 #import "PSRQuizViewController.h"
+#import "PSRQuize.h"
 #import "PSRAnswer.h"
 #import "PSRQuestion.h"
+#import "QuizeCell.h"
 
+@interface PSRQuizViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@interface PSRQuizViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *questionImage;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UITableView *answersList;
 
 @end
 
 @implementation PSRQuizViewController
 
-- (void)viewDidLoad {
+- (PSRQuestion *)currentQuestion
+{
+    return [self.aQuize questionAtIndex:self.currentIndex];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    [self checkSomeMethods];
-    [self createModel];
-    [self showBlocks];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setup];
+    
 }
 
-- (void)checkSomeMethods
+- (void)setup
 {
-    NSArray *array = @[@"asfasjfhs", @"salkhfsaio", @"dsljkhsdo"];
-    NSNumber *number  = @(124);
+    [self setupModel];
+    [self setupViews];
 }
 
 
-int squareFunction(int a){
-    return a * a;
-}
-
-
-
-- (void)showBlocks
+- (void)setupModel
 {
-    int number = 5;
-    
-    NSString *someString = @"hello";
-    
-    
-    
-    int (^square)(int a) = ^int(int a) {
-        
-        NSLog(@"%@",someString);
-        return a * a;
-    };
-    
-    NSLog(@"square of %d is %d",number, square(number));
-    
-    NSLog(@"sque of %d is %d", 77,square(77));
-    
+    if (!self.aQuize){
+        self.aQuize = [PSRQuize cinemaQuize];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupViews
+{
+    self.questionImage.image = [self currentQuestion].image;
+    self.questionLabel.text =[self currentQuestion].text;
+    self.answersList.delegate = self;
+    self.answersList.dataSource = self;
+    [self.answersList reloadData];
 }
 
 - (IBAction)answerPressed:(UIButton *)sender
@@ -68,9 +62,27 @@ int squareFunction(int a){
 //    djklsgdfjkbdlkdfskljoloildghio rtdio 
 }
 
-- (void)createModel
+#pragma mark - TableView DataSourse -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    PSRQuestion  *question1 = [[PSRQuestion alloc] initWithText:@"some text" answers:@[@"1", @"2"]];
+    return [[self currentQuestion] answers].count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QuizeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"1"];
+    
+    [self configureCell:cell
+             withAnswer:[[self currentQuestion] answers][indexPath.row]];
+    
+    return cell;
+}
+
+- (void)configureCell:(QuizeCell  *)cell withAnswer:(PSRAnswer *)answer
+{
+    cell.topText.text = answer.text;
+    cell.bottomText.text = [[self.answersList indexPathForCell:cell] description];
 }
 
 @end

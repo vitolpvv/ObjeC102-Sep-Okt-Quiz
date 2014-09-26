@@ -13,8 +13,5 @@
 @property (nonatomic,strong)PSRQuize *aQuize;
 @property (nonatomic)int currentIndex;
 - (IBAction)answerPressed:(UIButton *)sender;
-
-
-
 @end
 

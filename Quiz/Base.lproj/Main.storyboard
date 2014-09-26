@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xiU-Yl-IQ8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DPG-Nx-ZHF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -21,9 +21,6 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="FAa-i4-ZoM" kind="push" id="OTY-Cw-wWV"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85201870440000005" green="0.86610401459999997" blue="0.85880474449999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,10 +45,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="x32-BH-1On">
-                                <rect key="frame" x="0.0" y="262" width="320" height="370"/>
+                                <rect key="frame" x="0.0" y="272" width="320" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="te4-Bi-i2s" customClass="QuizeCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="1" id="te4-Bi-i2s" customClass="QuizeCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="te4-Bi-i2s" id="9Eg-5T-D0M">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -91,10 +88,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e6R-os-TlB"/>
+                    <connections>
+                        <outlet property="answersList" destination="x32-BH-1On" id="Xkc-gg-g5X"/>
+                        <outlet property="questionImage" destination="1uU-8m-vx8" id="hg3-tS-9c9"/>
+                        <outlet property="questionLabel" destination="Rov-yA-e6u" id="hiy-8e-WZ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xu-kz-yMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="-548"/>
+            <point key="canvasLocation" x="307" y="-781"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -175,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnA-Of-s4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="201"/>
+            <point key="canvasLocation" x="318" y="346"/>
         </scene>
         <!--Animation Controller-->
         <scene sceneID="jZR-8A-aou">
@@ -222,18 +224,19 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DPG-Nx-ZHF" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KEf-tt-1eV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EoM-7N-tsm" kind="relationship" relationship="rootViewController" id="rfC-yv-1ry"/>
+                        <segue destination="FAa-i4-ZoM" kind="relationship" relationship="rootViewController" id="dIr-zx-aYW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zd7-4U-SXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="-543"/>
+            <point key="canvasLocation" x="-107" y="-781"/>
         </scene>
     </scenes>
     <resources>
