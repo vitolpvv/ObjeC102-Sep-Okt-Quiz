@@ -27,6 +27,15 @@
     return [self.aQuize questionAtIndex:self.currentIndex];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PSRQuizViewController *controller = segue.destinationViewController;
+    if ([controller isKindOfClass:[PSRQuizViewController class]]){
+        controller.aQuize = self.aQuize;
+        controller.currentIndex = self.currentIndex + 1;
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
