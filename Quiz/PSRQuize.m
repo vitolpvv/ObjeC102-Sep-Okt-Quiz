@@ -45,28 +45,50 @@
 + (PSRQuize *)cinemaQuize
 {
     NSMutableArray *questions = [NSMutableArray new];
-    NSArray *texts = @[@"Кто это?",
-                      @"Фильм снят по основам диснеевского мультфильма «Спящая красавица». В каком году состоялась премьера этого мультфильма?",
-                      @"3). Произведения какого композитора были взяты за основу музыкального сопровождения «Спящей красавицы»?"];
-    NSArray *globalAnwers = @[@[@"а. Скарлетт Йоханссо",@"б. Анджелина Джоли",@"в. Дженнифер Энистон"],
-                        @[@"1959",@"1956",@"145523",@"532523"],
-                        @[@"Корсаков",@"Кюти",@"aas"]];
+    NSArray *texts = @[@"Кто зовут эту актрису?",
+                       @"Фильм снят по основам диснеевского мультфильма «Спящая красавица». В каком году состоялась премьера этого мультфильма?",
+                       @"Произведения какого композитора были взяты за основу музыкального сопровождения «Спящей красавицы»?",
+                       @"Какое проклятие наложила на принцессу Малефисента?",
+                       @"Кому принадлежит фраза \"Ostal ovista, babe\"?"];
+    NSArray *globalAnwers = @[@[@"Скарлетт Йоханссо",
+                                @"Анджелина Джоли",
+                                @"Дженнифер Энистон",
+                                @"Натали Портман"],
+                              @[@"1959",
+                                @"1956",
+                                @"1951",
+                                @"1961"],
+                              @[@"М.И. Глинка",
+                                @"Ц.А. Кюи",
+                                @"П.И. Чайковский",
+                                @"Н.А. Римский-Корсаков"],
+                              @[@"Аврора должна будет уколоть свой палец о шипы розы и умереть",
+                                @"Аврора должна будет уколоть свой палец о веретено и уснуть на 100 лет",
+                                @"Аврора должна будет откусить отравленное яблоко и умереть",
+                                @"Аврора должна будет уколоть свой палец о веретено и умереть"],
+                              @[@"Стивен Сигал",
+                                @"Арнольд Шварцнеггер",
+                                @"Сильвестр Сталоне",
+                                @"Аркадий Укупник"]];
     NSArray *images = @[[UIImage imageNamed:@"firstsQuestion"],
                         [UIImage imageNamed:@"secondQuestion"],
-                        [UIImage imageNamed:@"firstsQuestion"]];
-    for (int i = 0; i < 3; i++){
+                        [UIImage new],
+                        [UIImage new],
+                        [UIImage new]];
+    int correctAnswersIndexes[5] = {0, 0, 2, 3, 1};
+    for (int i = 0; i < 5; i++){
         NSMutableArray *localAnswers = [NSMutableArray new];
         for (NSString *anAnswer in globalAnwers[i]){
-            [localAnswers addObject:[[PSRAnswer alloc]initWithText:anAnswer
-                                                         isCorrect:i == 2]];
+            [localAnswers addObject:[PSRAnswer answerWithText:anAnswer]];
         }
+        [localAnswers[correctAnswersIndexes[i]] setCorrect:YES];
+        
         PSRQuestion *question = [[PSRQuestion alloc] initWithText:texts[i]
                                                             image:images[i]
                                                           answers:localAnswers];
         [questions addObject:question];
     }
-    PSRQuize *queze = [PSRQuize quizeWithQuestions:questions];
-    return queze;
+    return [PSRQuize quizeWithQuestions:questions];
 }
 
 @end

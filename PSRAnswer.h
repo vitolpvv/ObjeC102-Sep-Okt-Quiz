@@ -19,6 +19,7 @@
 @property (nonatomic) BOOL correct;
 
 + (instancetype)answerWithText:(NSString *)text isCorect:(BOOL)correct;
++ (instancetype)answerWithText:(NSString *)text;
 
 - (instancetype)initWithText:(NSString *)text isCorrect:(BOOL)correct;
 

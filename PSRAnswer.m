@@ -27,5 +27,8 @@
 + (instancetype)answerWithText:(NSString *)text isCorect:(BOOL)correct {
     return [[PSRAnswer alloc] initWithText:text isCorrect:correct];
 }
++ (instancetype)answerWithText:(NSString *)text {
+    return [[PSRAnswer alloc] initWithText:text isCorrect:NO];
+}
 
 @end
