@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class PSRQuizViewController;
 @interface QuizeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *topText;
 @property (weak, nonatomic) IBOutlet UILabel *bottomText;
