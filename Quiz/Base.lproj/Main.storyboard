@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DPG-Nx-ZHF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv8-3l-hmF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="P6T-4Y-r2t"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lag-Hk-HYf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qustion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rov-yA-e6u" userLabel="Qustion Label">
@@ -65,30 +65,72 @@
                         <outlet property="answersList" destination="x32-BH-1On" id="Xkc-gg-g5X"/>
                         <outlet property="questionImage" destination="1uU-8m-vx8" id="hg3-tS-9c9"/>
                         <outlet property="questionLabel" destination="Rov-yA-e6u" id="hiy-8e-WZ0"/>
+                        <segue destination="1dJ-J4-ztr" kind="show" identifier="resultsView" id="Y3E-Bx-PiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xu-kz-yMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWq-BQ-zFF">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <segue destination="FAa-i4-ZoM" kind="show" identifier="nextQuestionView" id="PwY-ds-HdO"/>
+                    </connections>
+                </button>
             </objects>
-            <point key="canvasLocation" x="333" y="-784"/>
+            <point key="canvasLocation" x="1145" y="-784"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SCb-El-n41">
+            <objects>
+                <viewController id="1dJ-J4-ztr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cfh-EU-3Xp"/>
+                        <viewControllerLayoutGuide type="bottom" id="qEs-Gv-YuD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qjw-FQ-d55">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Rh0-dw-aJ0">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="okf-ed-5cN"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cec-Zr-pMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="-784"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tKh-xH-JhZ">
+        <scene sceneID="oof-p8-jnO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DPG-Nx-ZHF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sv8-3l-hmF" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oEA-th-n9s"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KEf-tt-1eV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZc-zT-ElX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="k98-Sa-9TZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="FAa-i4-ZoM" kind="relationship" relationship="rootViewController" id="dIr-zx-aYW"/>
+                        <segue destination="FAa-i4-ZoM" kind="relationship" relationship="rootViewController" id="R9N-di-daX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zd7-4U-SXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRF-e2-Heo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-83" y="-784"/>
+            <point key="canvasLocation" x="749" y="-784"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R9N-di-daX"/>
+    </inferredMetricsTieBreakers>
 </document>

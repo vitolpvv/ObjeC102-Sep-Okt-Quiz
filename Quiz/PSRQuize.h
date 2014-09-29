@@ -13,6 +13,7 @@
 @interface PSRQuize : NSObject
 
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) NSMutableArray *selectedAnswers;
 
 + (instancetype)quizeWithQuestions:(NSArray *)quiestions;
 + (PSRQuize *)cinemaQuize;

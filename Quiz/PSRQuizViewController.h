@@ -10,8 +10,11 @@
 
 @class PSRQuize;
 @interface PSRQuizViewController : UIViewController
+
 @property (nonatomic,strong)PSRQuize *aQuize;
 @property (nonatomic)int currentIndex;
-- (IBAction)answerPressed:(UIButton *)sender;
+
+- (void)answerPressed;
+
 @end
 
