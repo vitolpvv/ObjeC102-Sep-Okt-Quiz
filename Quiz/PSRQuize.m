@@ -43,9 +43,28 @@
     return self.questions[index];
 }
 
-+ (PSRQuize *)cinemaQuize
-{
++ (instancetype)createQuizeWithQuestionsArray:(NSArray *)texts
+                                 answersArray:(NSArray *)globalAnswers
+                                       images:(NSArray *)images
+                        correctAnswersNumbers:(NSArray *)correctAnswersIndexes {
     NSMutableArray *questions = [NSMutableArray new];
+    for (int i = 0; i < correctAnswersIndexes.count; i++){
+        NSMutableArray *localAnswers = [NSMutableArray new];
+        for (NSString *anAnswer in globalAnswers[i]){
+            [localAnswers addObject:[PSRAnswer answerWithText:anAnswer]];
+        }
+        [localAnswers[[(NSNumber *)correctAnswersIndexes[i] intValue]] setCorrect:YES];
+        
+        PSRQuestion *question = [[PSRQuestion alloc] initWithText:texts[i]
+                                                            image:images[i]
+                                                          answers:localAnswers];
+        [questions addObject:question];
+    }
+    return [PSRQuize quizeWithQuestions:questions];
+}
+
++ (instancetype)cinemaQuize
+{
     NSArray *texts = @[@"Кто зовут эту актрису?",
                        @"Фильм снят по основам диснеевского мультфильма «Спящая красавица». В каком году состоялась премьера этого мультфильма?",
                        @"Произведения какого композитора были взяты за основу музыкального сопровождения «Спящей красавицы»?",
@@ -76,20 +95,47 @@
                         [UIImage new],
                         [UIImage new],
                         [UIImage new]];
-    int correctAnswersIndexes[5] = {0, 0, 2, 3, 1};
-    for (int i = 0; i < 5; i++){
-        NSMutableArray *localAnswers = [NSMutableArray new];
-        for (NSString *anAnswer in globalAnwers[i]){
-            [localAnswers addObject:[PSRAnswer answerWithText:anAnswer]];
-        }
-        [localAnswers[correctAnswersIndexes[i]] setCorrect:YES];
-        
-        PSRQuestion *question = [[PSRQuestion alloc] initWithText:texts[i]
-                                                            image:images[i]
-                                                          answers:localAnswers];
-        [questions addObject:question];
-    }
-    return [PSRQuize quizeWithQuestions:questions];
+    NSArray *correctAnswersIndexes = @[@0, @0, @2, @3, @1];
+    return [PSRQuize createQuizeWithQuestionsArray:texts
+                                      answersArray:globalAnwers
+                                            images:images
+                             correctAnswersNumbers:correctAnswersIndexes];
+}
+
++ (instancetype)animalQuize {
+    NSArray *texts = @[@"Почему крокодилы, поедая мясо, «плачут»?",
+                       @"Размер самого крупного паука на Земле превышает...?",
+                       @"Какое животное имеет годовые кольца как у деревьев?",
+                       @"Зачем совы селят в своих гнёздах змей?",
+                       @"Какого цвета кожа у Белого медведя?"];
+    NSArray *globalAnwers = @[@[@"Испытывают вину",
+                                @"От радости - наконец-то есть,что покушать",
+                                @"Выводят соли из организма"],
+                              @[@"1 метр",
+                                @"28 см",
+                                @"50 см",
+                                @"95.5 см",
+                                @"1.5 метра"],
+                              @[@"Черепаха",
+                                @"Хамелеон",
+                                @"Кольчатая змея"],
+                              @[@"Чтобы отгоняли хищников",
+                                @"Чтобы проводили естественный отбор и съедали слабых",
+                                @"Чтобы птенцы быстрее росли и меньше болели"],
+                              @[@"Белая",
+                                @"Красная",
+                                @"Черная",
+                                @"коричневая"]];
+    NSArray *images = @[[UIImage new],
+                        [UIImage new],
+                        [UIImage new],
+                        [UIImage new],
+                        [UIImage new]];
+    NSArray *correctAnswersIndexes = @[@3, @2, @1, @3, @3];
+    return [PSRQuize createQuizeWithQuestionsArray:texts
+                                      answersArray:globalAnwers
+                                            images:images
+                             correctAnswersNumbers:correctAnswersIndexes];
 }
 
 @end

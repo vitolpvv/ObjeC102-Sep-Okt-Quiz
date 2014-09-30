@@ -15,8 +15,9 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSMutableArray *selectedAnswers;
 
-+ (instancetype)quizeWithQuestions:(NSArray *)quiestions;
-+ (PSRQuize *)cinemaQuize;
+//+ (instancetype)quizeWithQuestions:(NSArray *)quiestions;
++ (instancetype)cinemaQuize;
++ (instancetype)animalQuize;
 - (PSRQuestion *)questionAtIndex:(NSInteger)index;
 - (NSInteger)quiestionsCount;
 
