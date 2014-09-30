@@ -36,14 +36,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if ([segue.identifier isEqualToString:@"nextQuestionView"]) {
-//        PSRQuizViewController *controller = segue.destinationViewController;
-//        controller.aQuize = self.aQuize;
-//        controller.currentIndex = self.currentIndex + 1;
-//    } else if ([segue.identifier isEqualToString:@"resultsView"]) {
-//        //colculate results
-//    }
-    
     if ([segue.destinationViewController conformsToProtocol:@protocol(PSRQuizeHandler)]){
         UIViewController <PSRQuizeHandler> *quizeHandler = segue.destinationViewController;
         [quizeHandler handleQuize:self.aQuize
@@ -80,7 +72,7 @@
     self.answersList.dataSource = self;
     [self.answersList reloadData];
     NSInteger quetionsCount = self.aQuize.quiestionsCount;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Вопрос %d из %ld", self.currentIndex + 1, quetionsCount]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Вопрос %d из %d", self.currentIndex + 1, (int)quetionsCount]];
 }
 
 - (void)answerPressed
@@ -110,7 +102,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PSRAnswer *answer = [[[self currentQuestion] answers] objectAtIndex:indexPath.row];
+    PSRAnswer *answer = [self.currentQuestion.answers objectAtIndex:indexPath.row];
     [self.aQuize.selectedAnswers addObject:answer];
     [self answerPressed];
 }
@@ -118,7 +110,6 @@
 - (void)configureCell:(QuizeCell  *)cell withAnswer:(PSRAnswer *)answer
 {
     cell.topText.text = answer.text;
-//    cell.bottomText.text = [[self.answersList indexPathForCell:cell] description];
 }
 
 @end

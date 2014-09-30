@@ -24,6 +24,7 @@
     NSParameterAssert(quiestions.count > 0);
     PSRQuize *aQuzie = [PSRQuize new];
     aQuzie.questions = quiestions;
+    aQuzie.selectedAnswers = [NSMutableArray new];
     
     return aQuzie;
 }
