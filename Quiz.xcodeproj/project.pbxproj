@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8411CE5D19D8C71D00BA8D72 /* PSRResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411CE5C19D8C71D00BA8D72 /* PSRResultsViewController.m */; };
+		8427640F19DB333900DE8132 /* PSRSelectQuizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427640E19DB333900DE8132 /* PSRSelectQuizeViewController.m */; };
+		8427641219DB337000DE8132 /* PSRSelectQuizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427641119DB337000DE8132 /* PSRSelectQuizeCell.m */; };
 		FE1A0FBD19D1EAE70018FD2D /* PSRAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */; };
 		FE1A0FC119D1EF480018FD2D /* PSRQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1A0FC019D1EF480018FD2D /* PSRQuestion.m */; };
 		FE4CC49A19D5CB2200DC59E3 /* quiz1.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4CC49919D5CB2200DC59E3 /* quiz1.plist */; };
@@ -37,6 +39,10 @@
 		8401EA0719D8BCD40079563F /* PSRQuizeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRQuizeHandler.h; path = Quiz/PSRQuizeHandler.h; sourceTree = SOURCE_ROOT; };
 		8411CE5B19D8C71D00BA8D72 /* PSRResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRResultsViewController.h; sourceTree = "<group>"; };
 		8411CE5C19D8C71D00BA8D72 /* PSRResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRResultsViewController.m; sourceTree = "<group>"; };
+		8427640D19DB333900DE8132 /* PSRSelectQuizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRSelectQuizeViewController.h; sourceTree = "<group>"; };
+		8427640E19DB333900DE8132 /* PSRSelectQuizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRSelectQuizeViewController.m; sourceTree = "<group>"; };
+		8427641019DB337000DE8132 /* PSRSelectQuizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRSelectQuizeCell.h; sourceTree = "<group>"; };
+		8427641119DB337000DE8132 /* PSRSelectQuizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRSelectQuizeCell.m; sourceTree = "<group>"; };
 		FE1A0FBB19D1EAE70018FD2D /* PSRAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRAnswer.h; path = ../PSRAnswer.h; sourceTree = "<group>"; };
 		FE1A0FBC19D1EAE70018FD2D /* PSRAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRAnswer.m; path = ../PSRAnswer.m; sourceTree = "<group>"; };
 		FE1A0FBF19D1EF480018FD2D /* PSRQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRQuestion.h; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 				FE4CC49919D5CB2200DC59E3 /* quiz1.plist */,
 				8411CE5B19D8C71D00BA8D72 /* PSRResultsViewController.h */,
 				8411CE5C19D8C71D00BA8D72 /* PSRResultsViewController.m */,
+				8427640D19DB333900DE8132 /* PSRSelectQuizeViewController.h */,
+				8427640E19DB333900DE8132 /* PSRSelectQuizeViewController.m */,
+				8427641019DB337000DE8132 /* PSRSelectQuizeCell.h */,
+				8427641119DB337000DE8132 /* PSRSelectQuizeCell.m */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -264,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBF302519D1DAE700BB62B2 /* PSRQuizViewController.m in Sources */,
+				8427640F19DB333900DE8132 /* PSRSelectQuizeViewController.m in Sources */,
 				FEBF302219D1DAE700BB62B2 /* AppDelegate.m in Sources */,
+				8427641219DB337000DE8132 /* PSRSelectQuizeCell.m in Sources */,
 				FE4CC49D19D5D02300DC59E3 /* PSRAnimationController.m in Sources */,
 				FE4CC4A019D5DE4800DC59E3 /* PSRQuize.m in Sources */,
 				8411CE5D19D8C71D00BA8D72 /* PSRResultsViewController.m in Sources */,
