@@ -73,7 +73,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="1179" y="-789"/>
+            <point key="canvasLocation" x="1991" y="-789"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="SCb-El-n41">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cec-Zr-pMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="-784"/>
+            <point key="canvasLocation" x="2439" y="-789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oof-p8-jnO">
@@ -135,16 +135,74 @@
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="k98-Sa-9TZ">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
-                    <connections>
-                        <segue destination="FAa-i4-ZoM" kind="relationship" relationship="rootViewController" id="R9N-di-daX"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRF-e2-Heo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="-784"/>
+            <point key="canvasLocation" x="228" y="-789"/>
+        </scene>
+        <!--Темы викторины-->
+        <scene sceneID="gWm-IR-n1i">
+            <objects>
+                <tableViewController id="Rq4-fj-c2h" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kvc-5I-qT0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="nRg-9o-gBc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nRg-9o-gBc" id="W8R-3e-igR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-wU-K13">
+                                            <rect key="frame" x="8" y="-1" width="91" height="99"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Тема викторины" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6k-1C-hY3">
+                                            <rect key="frame" x="107" y="38" width="205" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rq4-fj-c2h" id="fEj-y8-aoa"/>
+                            <outlet property="delegate" destination="Rq4-fj-c2h" id="5So-ol-tDQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Темы викторины" id="BFc-NG-c8J"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="FAa-i4-ZoM" kind="show" id="1lH-8d-pGB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1G-jO-35s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="-793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IgG-yV-1MZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T93-qG-XaY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3zT-Mj-hFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rq4-fj-c2h" kind="relationship" relationship="rootViewController" id="bTt-rt-qPG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aph-5f-TfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="-789"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R9N-di-daX"/>
+        <segue reference="1lH-8d-pGB"/>
     </inferredMetricsTieBreakers>
 </document>

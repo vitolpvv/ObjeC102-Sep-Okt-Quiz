@@ -11,6 +11,5 @@
 @class PSRQuizViewController;
 @interface QuizeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *topText;
-@property (weak, nonatomic) IBOutlet UILabel *bottomText;
 
 @end
