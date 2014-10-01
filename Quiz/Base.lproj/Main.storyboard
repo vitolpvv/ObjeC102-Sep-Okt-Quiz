@@ -107,7 +107,13 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Rh0-dw-aJ0">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="okf-ed-5cN"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="okf-ed-5cN">
+                            <connections>
+                                <segue destination="Zhq-cc-xQn" kind="popoverPresentation" popoverAnchorBarButtonItem="okf-ed-5cN" id="z9S-Ed-tEE">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
