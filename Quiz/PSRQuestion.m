@@ -16,7 +16,6 @@
     NSAssert(answers.count > 0, @"it is stupid to create queestion without answers %@",@"privet");
     if (self == [super init]){
         _text = [text copy];
-//        _answers = [answers copy];
         _answers = [self shuffleAnswers:answers];
         _image = image;
     }
@@ -25,7 +24,6 @@
 
 - (NSArray *)shuffleAnswers:(NSArray *)answersArray {
     srand(time(NULL));
-//    srandom(time(NULL));
     NSMutableArray *answers = [NSMutableArray arrayWithArray:answersArray];
     NSMutableArray *shuffledAnswers = [NSMutableArray new];
     while (answers.count > 0) {
