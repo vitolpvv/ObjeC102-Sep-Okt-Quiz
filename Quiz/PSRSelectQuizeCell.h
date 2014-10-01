@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PSRSelectQuizeCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *quizeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *quizeImage;
 
 @end

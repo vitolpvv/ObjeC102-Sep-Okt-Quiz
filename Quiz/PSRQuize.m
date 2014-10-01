@@ -92,7 +92,7 @@
                                 @"Аркадий Укупник"]];
     NSArray *images = @[[UIImage imageNamed:@"firstsQuestion"],
                         [UIImage imageNamed:@"secondQuestion"],
-                        [UIImage new],
+                        [UIImage imageNamed:@"question3"],
                         [UIImage new],
                         [UIImage new]];
     NSArray *correctAnswersIndexes = @[@0, @0, @2, @3, @1];
@@ -131,7 +131,7 @@
                         [UIImage new],
                         [UIImage new],
                         [UIImage new]];
-    NSArray *correctAnswersIndexes = @[@3, @2, @1, @3, @3];
+    NSArray *correctAnswersIndexes = @[@2, @1, @0, @2, @2];
     return [PSRQuize createQuizeWithQuestionsArray:texts
                                       answersArray:globalAnwers
                                             images:images
