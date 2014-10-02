@@ -17,7 +17,6 @@
 - (instancetype)initWithText:(NSString *)text isCorrect:(BOOL)correct
 {
     if (self == [super init]){
-        //1 ?
         _text = [text copy];
         _correct = correct;
     }

@@ -90,11 +90,11 @@
                                 @"Арнольд Шварцнеггер",
                                 @"Сильвестр Сталоне",
                                 @"Аркадий Укупник"]];
-    NSArray *images = @[[UIImage imageNamed:@"firstsQuestion"],
-                        [UIImage imageNamed:@"secondQuestion"],
-                        [UIImage imageNamed:@"question3"],
-                        [UIImage new],
-                        [UIImage new]];
+    NSArray *images = @[[UIImage imageNamed:@"cinema1"],
+                        [UIImage imageNamed:@"cinema2"],
+                        [UIImage imageNamed:@"cinema3"],
+                        [UIImage imageNamed:@"cinema4"],
+                        [UIImage imageNamed:@"cinema5"]];
     NSArray *correctAnswersIndexes = @[@0, @0, @2, @3, @1];
     return [PSRQuize createQuizeWithQuestionsArray:texts
                                       answersArray:globalAnwers
@@ -126,11 +126,11 @@
                                 @"Красная",
                                 @"Черная",
                                 @"коричневая"]];
-    NSArray *images = @[[UIImage new],
-                        [UIImage new],
-                        [UIImage new],
-                        [UIImage new],
-                        [UIImage new]];
+    NSArray *images = @[[UIImage imageNamed:@"animal1"],
+                        [UIImage imageNamed:@"animal2"],
+                        [UIImage imageNamed:@"animal3"],
+                        [UIImage imageNamed:@"animal4"],
+                        [UIImage imageNamed:@"animal5"]];
     NSArray *correctAnswersIndexes = @[@2, @1, @0, @2, @2];
     return [PSRQuize createQuizeWithQuestionsArray:texts
                                       answersArray:globalAnwers
