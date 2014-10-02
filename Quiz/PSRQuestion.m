@@ -23,7 +23,7 @@
 }
 
 - (NSArray *)shuffleAnswers:(NSArray *)answersArray {
-    srand(time(NULL));
+    sranddev();
     NSMutableArray *answers = [NSMutableArray arrayWithArray:answersArray];
     NSMutableArray *shuffledAnswers = [NSMutableArray new];
     while (answers.count > 0) {
