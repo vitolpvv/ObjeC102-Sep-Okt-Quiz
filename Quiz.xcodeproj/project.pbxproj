@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		8411CE5B19D8C71D00BA8D72 /* PSRResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRResultsViewController.h; sourceTree = "<group>"; };
 		8411CE5C19D8C71D00BA8D72 /* PSRResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRResultsViewController.m; sourceTree = "<group>"; };
+		841D147619DD8D1700DA7D46 /* PSRQuizeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRQuizeHandler.h; sourceTree = "<group>"; };
 		8427640D19DB333900DE8132 /* PSRSelectQuizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRSelectQuizeViewController.h; sourceTree = "<group>"; };
 		8427640E19DB333900DE8132 /* PSRSelectQuizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRSelectQuizeViewController.m; sourceTree = "<group>"; };
 		8427641019DB337000DE8132 /* PSRSelectQuizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRSelectQuizeCell.h; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		8435E41619DB5AF80032D399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				841D147619DD8D1700DA7D46 /* PSRQuizeHandler.h */,
 				FE4CC49E19D5DE4800DC59E3 /* PSRQuize.h */,
 				FE4CC49F19D5DE4800DC59E3 /* PSRQuize.m */,
 				FE1A0FBF19D1EF480018FD2D /* PSRQuestion.h */,

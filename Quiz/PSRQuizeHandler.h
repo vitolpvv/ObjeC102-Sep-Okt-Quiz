@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class PSRQuize;
 @protocol PSRQuizeHandler <NSObject>
 
 - (void)handleQuize:(PSRQuize *)quize withQuestionIndex:(int)index;
